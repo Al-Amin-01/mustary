@@ -1,0 +1,68 @@
+.no-button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.no-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 30px;
+  border: 2px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  min-width: 120px;
+  justify-content: center;
+  user-select: none;
+  will-change: transform;
+  transition: border-color 0.2s ease;
+}
+
+.no-button:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.no-button__emoji {
+  font-size: 1.1rem;
+}
+
+.no-button-message {
+  position: absolute;
+  top: -52px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-style: italic;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.01em;
+}
+
+.no-button-message::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid rgba(0, 0, 0, 0.75);
+}

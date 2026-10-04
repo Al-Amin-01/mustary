@@ -1,0 +1,129 @@
+.celebration-screen {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.celebration-particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.celebration-particle {
+  position: fixed;
+  user-select: none;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 0 6px rgba(255, 150, 150, 0.5));
+}
+
+.celebration-card {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  text-align: center;
+  max-width: 580px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border-radius: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 56px 52px;
+  box-shadow:
+    0 0 0 1px rgba(255, 107, 157, 0.2),
+    0 12px 60px rgba(0, 0, 0, 0.45),
+    0 0 100px rgba(248, 113, 133, 0.3);
+}
+
+.celebration-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.02) 100%);
+  pointer-events: none;
+}
+
+.celebration-ring {
+  font-size: 3.5rem;
+  filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.7));
+}
+
+.celebration-hearts-row {
+  display: flex;
+  gap: 8px;
+  font-size: 1.6rem;
+}
+
+.celebration-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6.5vw, 3.8rem);
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 28px rgba(248, 113, 133, 0.6);
+}
+
+.celebration-title--accent {
+  background: linear-gradient(135deg, #fcd34d, #f87171, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 12px rgba(248, 113, 133, 0.4));
+}
+
+.celebration-subtitle {
+  font-family: var(--font-script);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.celebration-divider {
+  width: 70%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 157, 0.6), transparent);
+  transform-origin: center;
+}
+
+.celebration-message {
+  font-family: var(--font-script);
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+.celebration-bottom-hearts {
+  display: flex;
+  gap: 10px;
+  font-size: 1.4rem;
+  margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+  .celebration-card {
+    padding: 40px 28px;
+    border-radius: 28px;
+    gap: 14px;
+  }
+}

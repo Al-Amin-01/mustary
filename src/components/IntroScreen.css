@@ -1,0 +1,111 @@
+.intro-screen {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 52px 48px;
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.4), 0 0 80px rgba(255, 107, 157, 0.2);
+}
+
+.intro-heart-icon {
+  font-size: 3.2rem;
+  filter: drop-shadow(0 0 16px rgba(255, 107, 157, 0.8));
+  margin-bottom: 4px;
+}
+
+.intro-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 3.5rem);
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  text-shadow: 0 2px 28px rgba(255, 107, 157, 0.5);
+}
+
+.intro-subtitle {
+  font-family: var(--font-script);
+  font-size: clamp(1.5rem, 3.5vw, 1.95rem);
+  color: rgba(255, 255, 255, 0.92);
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.intro-note {
+  font-family: var(--font-script);
+  font-size: clamp(1.2rem, 2.8vw, 1.55rem);
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.intro-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6b9d, #c94b7d);
+  box-shadow: 0 0 24px rgba(255, 107, 157, 0.5), 0 4px 20px rgba(0, 0, 0, 0.25);
+  margin-top: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 60%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.intro-float-heart {
+  position: fixed;
+  font-size: 1.8rem;
+  bottom: 15%;
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 480px) {
+  .intro-content {
+    padding: 36px 28px;
+    border-radius: 24px;
+  }
+  .intro-button {
+    padding: 14px 32px;
+  }
+}
